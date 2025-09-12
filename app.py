@@ -22,12 +22,11 @@ def main():
 
 
     if app_name == "TrainModel":
-        cron_gmaps_api_extract_app = CronTrainModelApp()
+        Cron_Train_Model_App = CronTrainModelApp()
         
-        cron_gmaps_api_extract_app.start(
+        Cron_Train_Model_App.start(
             hour=args.range
         )
-        print("modelo entrenado")
         return
 
 

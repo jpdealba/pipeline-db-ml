@@ -1,7 +1,7 @@
 import os
 import joblib
 import numpy as np
-
+import os
 
 from src.contexts.api.models import PredictorRequest
 
@@ -13,8 +13,8 @@ class TrainModelController:
         sex=request.sex.value
         nuevo=request.nuevo
        
-
-        lr_model_path = "/app/assets/modelo_entrenado.pkl"
+        lr_model_path = os.getenv("MODELO_ENTRENADO")
+       
         # Cargar el modelo desde el archivo
         modelo_cargado = joblib.load(lr_model_path)
 
